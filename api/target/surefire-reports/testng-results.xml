@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-12-06T12:31:15 IST" name="Suite" finished-at="2023-12-06T12:31:26 IST" duration-ms="11333">
+    <groups>
+    </groups>
+    <test started-at="2023-12-06T12:31:15 IST" name="Test" finished-at="2023-12-06T12:31:26 IST" duration-ms="11333">
+      <class name="userManagement.Getuser">
+        <test-method signature="basicauth()[pri:0, instance:userManagement.Getuser@6d3a388c]" started-at="2023-12-06T12:31:15 IST" name="basicauth" finished-at="2023-12-06T12:31:19 IST" duration-ms="3475" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basicauth -->
+        <test-method signature="deletemethod()[pri:0, instance:userManagement.Getuser@6d3a388c]" started-at="2023-12-06T12:31:19 IST" name="deletemethod" finished-at="2023-12-06T12:31:19 IST" duration-ms="600" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletemethod -->
+        <test-method signature="formparam()[pri:0, instance:userManagement.Getuser@6d3a388c]" started-at="2023-12-06T12:31:19 IST" name="formparam" finished-at="2023-12-06T12:31:20 IST" duration-ms="769" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- formparam -->
+        <test-method signature="getcookies()[pri:0, instance:userManagement.Getuser@6d3a388c]" started-at="2023-12-06T12:31:20 IST" name="getcookies" finished-at="2023-12-06T12:31:20 IST" duration-ms="208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getcookies -->
+        <test-method signature="hasItem()[pri:0, instance:userManagement.Getuser@6d3a388c]" started-at="2023-12-06T12:31:20 IST" name="hasItem" finished-at="2023-12-06T12:31:22 IST" duration-ms="1633" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hasItem -->
+        <test-method signature="hassize()[pri:0, instance:userManagement.Getuser@6d3a388c]" started-at="2023-12-06T12:31:22 IST" name="hassize" finished-at="2023-12-06T12:31:22 IST" duration-ms="559" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hassize -->
+        <test-method signature="multipleheaders()[pri:0, instance:userManagement.Getuser@6d3a388c]" started-at="2023-12-06T12:31:22 IST" name="multipleheaders" finished-at="2023-12-06T12:31:23 IST" duration-ms="242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- multipleheaders -->
+        <test-method signature="multiplequeryparam()[pri:0, instance:userManagement.Getuser@6d3a388c]" started-at="2023-12-06T12:31:23 IST" name="multiplequeryparam" finished-at="2023-12-06T12:31:23 IST" duration-ms="271" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- multiplequeryparam -->
+        <test-method signature="pathparam()[pri:0, instance:userManagement.Getuser@6d3a388c]" started-at="2023-12-06T12:31:23 IST" name="pathparam" finished-at="2023-12-06T12:31:25 IST" duration-ms="1941" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pathparam -->
+        <test-method signature="queryparam()[pri:0, instance:userManagement.Getuser@6d3a388c]" started-at="2023-12-06T12:31:25 IST" name="queryparam" finished-at="2023-12-06T12:31:25 IST" duration-ms="260" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- queryparam -->
+        <test-method signature="testfetchheaders()[pri:0, instance:userManagement.Getuser@6d3a388c]" started-at="2023-12-06T12:31:25 IST" name="testfetchheaders" finished-at="2023-12-06T12:31:25 IST" duration-ms="229" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testfetchheaders -->
+        <test-method signature="validateTestBody()[pri:0, instance:userManagement.Getuser@6d3a388c]" started-at="2023-12-06T12:31:25 IST" name="validateTestBody" finished-at="2023-12-06T12:31:26 IST" duration-ms="528" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTestBody -->
+        <test-method signature="validatecontainsite()[pri:0, instance:userManagement.Getuser@6d3a388c]" started-at="2023-12-06T12:31:26 IST" name="validatecontainsite" finished-at="2023-12-06T12:31:26 IST" duration-ms="560" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatecontainsite -->
+      </class> <!-- userManagement.Getuser -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
