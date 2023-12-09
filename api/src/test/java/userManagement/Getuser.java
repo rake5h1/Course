@@ -5,8 +5,8 @@ import org.testng.annotations.Test;
 
 import core.StatusCode;
 import io.restassured.response.Response;
-import io.restassured.http.Cookie;
-import io.restassured.http.Cookies;
+import utils.JsonReader;
+import utils.PropertyReader;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
 
@@ -15,11 +15,18 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.util.List;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Map;
+
 import java.util.HashMap;
 
 public class Getuser {
+    PropertyReader configfile;
+
+    public Getuser() {
+        this.configfile = new PropertyReader();
+    }
 
     @Test
     public void validateTestBody() {
@@ -139,7 +146,8 @@ public class Getuser {
         baseURI = "https://reqres.in/api";
 
         Response res = given().cookie("test1", "cookie1")
-                .when().get("/users?page=2").then().assertThat().statusCode(StatusCode.SUCCESS.code).extract().response();
+                .when().get("/users?page=2").then().assertThat().statusCode(StatusCode.SUCCESS.code).extract()
+                .response();
         Map<String, String> cookies = res.getCookies();
 
         // System.out.println(cookies);
@@ -161,7 +169,28 @@ public class Getuser {
 
         Response res = given().delete();
         assertThat(res.getStatusCode(), equalTo(StatusCode.NO_CONTENT.code));
-        System.out.println(StatusCode.NO_CONTENT.msg);
+        // System.out.println(StatusCode.NO_CONTENT.msg);
     }
 
+    @Test
+    public void getdatafromjson() throws IOException {
+        String username = new JsonReader().gettestdata("username");
+        String password = new JsonReader().gettestdata("password");
+        baseURI = "https://postman-echo.com/basic-auth";
+
+        Response res = given().auth().basic(username, password).when().get();
+        assertThat(res.statusCode(), equalTo(StatusCode.SUCCESS.code));
+        res.then().body("authenticated", equalTo(true));
+        // System.out.println(StatusCode.SUCCESS.msg);
+    }
+
+    @Test
+    public void getdatafrompropertyfile() {
+
+        String server = configfile.propertydata("config.properties", "server");
+        // System.out.println(server);
+        Response res = given().queryParam("page", 2).when().get(server);
+        assertThat(res.statusCode(), equalTo(StatusCode.SUCCESS.code));
+        System.out.println("getdatafrompropertyfile passed");
+    }
 }
