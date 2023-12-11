@@ -187,10 +187,21 @@ public class Getuser {
     @Test
     public void getdatafrompropertyfile() {
 
+        String url = configfile.propertydata("config.properties", "url");
         String server = configfile.propertydata("config.properties", "server");
         // System.out.println(server);
-        Response res = given().queryParam("page", 2).when().get(server);
+        Response res = given().queryParam("page", 2).when().get(url);
         assertThat(res.statusCode(), equalTo(StatusCode.SUCCESS.code));
+        // assertThat(res.jsonPath().getList("total"), equalTo(12));
+        Headers header = res.getHeaders();
+        for (Header h : header) {
+            if (h.getName().contains("Server")) {
+                assertThat(h.getValue(), equalTo(server));
+
+            }
+        }
+
         System.out.println("getdatafrompropertyfile passed");
     }
+
 }
