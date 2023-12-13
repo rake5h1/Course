@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 
@@ -22,6 +23,19 @@ public class JsonReader {
         String data;
         data = (String) jsonReader().get(input);
         return data;
+    }
+
+    public JSONArray getjsonarray(String key) throws IOException {
+        JSONObject array = jsonReader();
+        JSONArray jsonarray = (JSONArray) array.get(key);
+        return jsonarray;
+    }
+
+    public Object getjsonarraydata(String key, int index) throws IOException {
+        JSONArray array = getjsonarray(key);
+        Object data = array.get(index);
+        return data;
+
     }
 
 }

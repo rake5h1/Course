@@ -1,12 +1,14 @@
 
 package userManagement;
 
+import org.json.simple.JSONArray;
 import org.testng.annotations.Test;
 
 import core.StatusCode;
 import io.restassured.response.Response;
 import utils.JsonReader;
 import utils.PropertyReader;
+import utils.SoftAssertionUtil;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
 
@@ -20,12 +22,15 @@ import java.util.Arrays;
 import java.util.Map;
 
 import java.util.HashMap;
+import java.util.Iterator;
 
 public class Getuser {
     PropertyReader configfile;
+    SoftAssertionUtil softassert;
 
     public Getuser() {
         this.configfile = new PropertyReader();
+        this.softassert = new SoftAssertionUtil();
     }
 
     @Test
@@ -46,15 +51,16 @@ public class Getuser {
 
     }
 
-    @Test
+    @Test(groups = { "size" })
     public void hassize() {
-        baseURI = "https://jsonplaceholder.typicode.com/";
-        Response response = given().when().get("/posts").then().extract().response();
-
-        assertThat(response.jsonPath().getList("title"), hasSize(100));
+        baseURI = "https://reqres.in/api/users";
+        Response response = given().queryParam("page", 2).when().get();
+        assertThat(response.statusCode(), equalTo(StatusCode.SUCCESS.code));
+        // System.out.println(response.jsonPath().getList("data"));
+        assertThat(response.jsonPath().getList("data"), hasSize(6));
     }
 
-    @Test
+    @Test(groups = { "size" })
     public void validatecontainsite() {
 
         baseURI = "https://jsonplaceholder.typicode.com/";
@@ -82,7 +88,7 @@ public class Getuser {
 
     }
 
-    @Test
+    @Test(groups = { "size" })
     public void multiplequeryparam() {
         baseURI = "https://reqres.in/api";
 
@@ -155,15 +161,6 @@ public class Getuser {
     }
 
     @Test
-    public void basicauth() {
-        baseURI = "https://postman-echo.com/basic-auth";
-
-        Response res = given().auth().basic("postman", "password").when().get();
-        assertThat(res.statusCode(), equalTo(StatusCode.SUCCESS.code));
-        res.then().body("authenticated", equalTo(true));
-    }
-
-    @Test
     public void deletemethod() {
         baseURI = "https://reqres.in/api/users?=2";
 
@@ -173,24 +170,12 @@ public class Getuser {
     }
 
     @Test
-    public void getdatafromjson() throws IOException {
-        String username = new JsonReader().gettestdata("username");
-        String password = new JsonReader().gettestdata("password");
-        baseURI = "https://postman-echo.com/basic-auth";
-
-        Response res = given().auth().basic(username, password).when().get();
-        assertThat(res.statusCode(), equalTo(StatusCode.SUCCESS.code));
-        res.then().body("authenticated", equalTo(true));
-        // System.out.println(StatusCode.SUCCESS.msg);
-    }
-
-    @Test
     public void getdatafrompropertyfile() {
 
         String url = configfile.propertydata("config.properties", "url");
         String server = configfile.propertydata("config.properties", "server");
         // System.out.println(server);
-        Response res = given().queryParam("page", 2).when().get(url);
+        Response res = given().queryParam("page", 2).when().get(url + "users");
         assertThat(res.statusCode(), equalTo(StatusCode.SUCCESS.code));
         // assertThat(res.jsonPath().getList("total"), equalTo(12));
         Headers header = res.getHeaders();
@@ -201,7 +186,51 @@ public class Getuser {
             }
         }
 
-        System.out.println("getdatafrompropertyfile passed");
+        // System.out.println("getdatafrompropertyfile passed");
+    }
+
+    @Test
+    public void getdatafromjsonandpropertiesboth() throws IOException {
+        String server = configfile.propertydata("config.properties", "url");
+        String endpoint = new JsonReader().gettestdata("endpoint");
+        String url = server + endpoint;
+        Response res = given().when().get(url);
+        assertThat(res.statusCode(), equalTo(StatusCode.SUCCESS.code));
+        // System.out.println("getdatafromjsonandpropertiesboth passed");
+
+    }
+
+    @Test
+    public void validatesoftassert() {
+
+        baseURI = "https://reqres.in/api";
+
+        Response res = given().queryParam("page", 2).when().get("/users");
+
+        softassert.assertEquals(res.statusCode(), StatusCode.SUCCESS.code, "Status code is not 200");
+        softassert.assertAll();
+        List<String> emails = res.jsonPath().getList("data.email");
+        softassert.assertEquals(emails.get(0), "michael.lawson@reqres.in", "Email is not correct");
+        softassert.assertAll();
+        // System.out.println("validatesoftassert passed");
+    }
+
+    @Test
+    public void getdatafromjsonarray() throws IOException {
+        String data = new JsonReader().getjsonarraydata("languages", 2).toString();
+        System.out.println(data);
+        System.out.println("getdatafromjsonarray passed");
+    }
+
+    @Test
+    public void getdatafromjsonarrayiteration() throws IOException {
+        JSONArray array = new JsonReader().getjsonarray("contact");
+        Iterator<String> itr = array.iterator();
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+        }
+        System.out.println("getdatafromjsonarrayiteration passed");
+
     }
 
 }

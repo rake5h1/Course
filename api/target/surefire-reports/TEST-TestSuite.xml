@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="11.838" tests="15" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="8.688" tests="20" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11\bin"/>
-    <property name="sun.java.command" value="C:\Users\Rakesh\AppData\Local\Temp\surefire9487803669856021541\surefirebooter15082411232344496215.jar C:\Users\Rakesh\AppData\Local\Temp\surefire9487803669856021541 2023-12-10T12-02-41_485-jvmRun1 surefire475949233446489207tmp surefire_012653621703208206049tmp"/>
+    <property name="sun.java.command" value="C:\Users\Rakesh\AppData\Local\Temp\surefire4630236687913682762\surefirebooter12960124308627518789.jar C:\Users\Rakesh\AppData\Local\Temp\surefire4630236687913682762 2023-12-13T12-11-49_613-jvmRun1 surefire16457796473694872801tmp surefire_06336363285223439961tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Rakesh\Desktop\Course\api\target\test-classes;C:\Users\Rakesh\Desktop\Course\api\target\classes;C:\Users\Rakesh\.m2\repository\io\rest-assured\rest-assured\5.3.2\rest-assured-5.3.2.jar;C:\Users\Rakesh\.m2\repository\org\apache\groovy\groovy\4.0.11\groovy-4.0.11.jar;C:\Users\Rakesh\.m2\repository\org\apache\groovy\groovy-xml\4.0.11\groovy-xml-4.0.11.jar;C:\Users\Rakesh\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Rakesh\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Rakesh\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Rakesh\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\Rakesh\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Rakesh\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Rakesh\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Rakesh\.m2\repository\io\rest-assured\json-path\5.3.2\json-path-5.3.2.jar;C:\Users\Rakesh\.m2\repository\org\apache\groovy\groovy-json\4.0.11\groovy-json-4.0.11.jar;C:\Users\Rakesh\.m2\repository\io\rest-assured\rest-assured-common\5.3.2\rest-assured-common-5.3.2.jar;C:\Users\Rakesh\.m2\repository\io\rest-assured\xml-path\5.3.2\xml-path-5.3.2.jar;C:\Users\Rakesh\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\Rakesh\.m2\repository\org\testng\testng\7.8.0\testng-7.8.0.jar;C:\Users\Rakesh\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Rakesh\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Rakesh\.m2\repository\org\webjars\jquery\3.6.1\jquery-3.6.1.jar;C:\Users\Rakesh\.m2\repository\com\googlecode\json-simple\json-simple\1.1.1\json-simple-1.1.1.jar;C:\Users\Rakesh\.m2\repository\junit\junit\4.10\junit-4.10.jar;C:\Users\Rakesh\.m2\repository\org\hamcrest\hamcrest-core\1.1\hamcrest-core-1.1.jar;C:\Users\Rakesh\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;C:\Users\Rakesh\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\Rakesh\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\Rakesh\AppData\Local\Temp\surefire9487803669856021541\surefirebooter15082411232344496215.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Rakesh\AppData\Local\Temp\surefire4630236687913682762\surefirebooter12960124308627518789.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.19+9-LTS-224"/>
@@ -53,26 +53,31 @@
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-11\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\Sdk\Sdk\platform-tools;C:\Program Files\Sdk\Sdk\tools\bin;C:\src\flutter\bin;C:\Gradle\gradle-8.1.1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\chromedriver_win32;C:\Program Files\Tesseract-OCR;C:\Users\Rakesh\AppData\Local\Programs\Python\Python39\Scripts;C:\Program Files\Docker;C:\Program Files\Docker\Docker\resources\bin;C:\allure\allure-2.24.1\bin;C:\Program Files\apache-maven-3.9.5\bin;C:\Program Files\Amazon\AWSCLIV2\;C:\Users\Rakesh\AppData\Local\ActiveState\StateTool\release\bin;C:\Users\Rakesh\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Rakesh\AppData\Local\Programs\Python\Python39\;C:\Users\Rakesh\AppData\Local\activestate\cache\bin;C:\Users\Rakesh\AppData\Local\Microsoft\WindowsApps;C:\Users\Rakesh\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Rakesh\AppData\Roaming\npm;C:\Users\Rakesh\.dotnet\tools;C:\src\flutter\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.5\bin;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-11\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\Sdk\Sdk\platform-tools;C:\Program Files\Sdk\Sdk\tools\bin;C:\src\flutter\bin;C:\Gradle\gradle-8.1.1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\chromedriver_win32;C:\Program Files\Tesseract-OCR;C:\Users\Rakesh\AppData\Local\Programs\Python\Python39\Scripts;C:\Program Files\Docker;C:\Program Files\Docker\Docker\resources\bin;C:\allure\allure-2.24.1\bin;C:\Program Files\apache-maven-3.9.5\bin;C:\Program Files\Amazon\AWSCLIV2\;C:\Users\Rakesh\AppData\Local\ActiveState\StateTool\release\bin;C:\Users\Rakesh\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Rakesh\AppData\Local\Programs\Python\Python39\;C:\Users\Rakesh\AppData\Local\activestate\cache\bin;C:\Users\Rakesh\AppData\Local\Microsoft\WindowsApps;C:\Users\Rakesh\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Rakesh\AppData\Roaming\npm;C:\Users\Rakesh\.dotnet\tools;C:\src\flutter\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.5\bin;;C:\Users\Rakesh\AppData\Local\GitHubDesktop\bin;."/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="java.vm.version" value="11.0.19+9-LTS-224"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="basicauth" classname="userManagement.Getuser" time="3.139"/>
-  <testcase name="deletemethod" classname="userManagement.Getuser" time="0.663"/>
-  <testcase name="formparam" classname="userManagement.Getuser" time="0.56"/>
-  <testcase name="getcookies" classname="userManagement.Getuser" time="0.388"/>
-  <testcase name="getdatafromjson" classname="userManagement.Getuser" time="1.62"/>
-  <testcase name="getdatafrompropertyfile" classname="userManagement.Getuser" time="0.253"/>
-  <testcase name="hasItem" classname="userManagement.Getuser" time="0.658"/>
-  <testcase name="hassize" classname="userManagement.Getuser" time="0.657"/>
-  <testcase name="multipleheaders" classname="userManagement.Getuser" time="0.261"/>
+  <testcase name="deletemethod" classname="userManagement.Getuser" time="1.596"/>
+  <testcase name="basicauth" classname="userManagement.GetPost" time="0.004"/>
+  <testcase name="formparam" classname="userManagement.Getuser" time="0.637"/>
+  <testcase name="getcookies" classname="userManagement.Getuser" time="0.293"/>
+  <testcase name="getdatafromjsonandpropertiesboth" classname="userManagement.Getuser" time="0.261"/>
+  <testcase name="getdatafromjsonarray" classname="userManagement.Getuser" time="0.001"/>
+  <testcase name="getdatafromjsonarrayiteration" classname="userManagement.Getuser" time="0.001"/>
+  <testcase name="getdatafrompropertyfile" classname="userManagement.Getuser" time="0.248"/>
+  <testcase name="getdatafromjson" classname="userManagement.GetPost" time="0.841"/>
+  <testcase name="hasItem" classname="userManagement.Getuser" time="0.842"/>
+  <testcase name="hassize" classname="userManagement.Getuser" time="0.271"/>
+  <testcase name="multipleheaders" classname="userManagement.Getuser" time="0.244"/>
+  <testcase name="postdatarestassured" classname="userManagement.GetPost" time="0.103"/>
   <testcase name="multiplequeryparam" classname="userManagement.Getuser" time="0.288"/>
-  <testcase name="pathparam" classname="userManagement.Getuser" time="1.072"/>
-  <testcase name="queryparam" classname="userManagement.Getuser" time="0.259"/>
-  <testcase name="testfetchheaders" classname="userManagement.Getuser" time="0.247"/>
-  <testcase name="validateTestBody" classname="userManagement.Getuser" time="0.571"/>
-  <testcase name="validatecontainsite" classname="userManagement.Getuser" time="0.599"/>
+  <testcase name="pathparam" classname="userManagement.Getuser" time="0.865"/>
+  <testcase name="queryparam" classname="userManagement.Getuser" time="0.279"/>
+  <testcase name="testfetchheaders" classname="userManagement.Getuser" time="0.244"/>
+  <testcase name="validateTestBody" classname="userManagement.Getuser" time="1.184"/>
+  <testcase name="validatecontainsite" classname="userManagement.Getuser" time="0.545"/>
+  <testcase name="validatesoftassert" classname="userManagement.Getuser" time="0.259"/>
 </testsuite>

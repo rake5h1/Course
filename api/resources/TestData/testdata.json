@@ -1,4 +1,22 @@
 {
-    "username":"postman",
-    "password":"password"
+    "username": "postman",
+    "password": "password",
+    "endpoint": "users",
+    "languages": [
+        "en",
+        "fr",
+        "es",
+        "de",
+        "it",
+        "pt",
+        "ru",
+        "ja",
+        "zh",
+        "ko"
+    ],
+    "contact": [
+        "name:Rakesh",
+        "email:abc@xyz.com",
+        "phone:1234567890"
+    ]
 }

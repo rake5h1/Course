@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="API Auomation Suite"  parallel="classes" thread-count="8">
+<!--    <groups>-->
+<!--        <run>-->
+<!--            <include name="size"/>-->
+<!--        </run>-->
+<!--    </groups>-->
+    <test name="User TestCases">
+        <classes>
+            <class name="userManagement.Getuser"/>
+            <class name="userManagement.GetPost"/>
+        </classes>
+
+
+    </test>
+</suite>

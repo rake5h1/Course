@@ -1,3 +1,4 @@
 utils\JsonReader.class
 core\StatusCode.class
 utils\PropertyReader.class
+utils\SoftAssertionUtil.class
