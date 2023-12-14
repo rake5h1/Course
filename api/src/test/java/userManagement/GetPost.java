@@ -9,15 +9,17 @@ import static org.junit.Assert.assertThat;
 import org.apache.commons.io.FileUtils;
 import org.testng.annotations.Test;
 
+import core.BaseTest;
 import core.StatusCode;
 import io.restassured.response.Response;
+import pojo.PostrequestBody;
 import utils.JsonReader;
 
 import java.io.File;
 import java.io.IOException;
 import utils.SoftAssertionUtil;
 
-public class GetPost {
+public class GetPost extends BaseTest{
     SoftAssertionUtil softassert;
     public GetPost() {
         this.softassert = new SoftAssertionUtil();
@@ -51,6 +53,17 @@ public class GetPost {
         Response res = given().header("Content-Type","application/json").body(json).when().post("https://reqres.in/api/users");
         softassert.assertEquals(res.statusCode(), StatusCode.CREATED.code,"Object not created");
         softassert.assertAll();
-        System.out.println("postdatarestassured is working fine ");
+        //System.out.println("postdatarestassured is working fine ");
     }
+    @Test
+    public void postwithpojo(){
+        PostrequestBody postbody = new PostrequestBody();
+        postbody.setName("morpheus");
+        postbody.setJob("leader");
+        Response res= given().body(postbody).when().post("https://reqres.in/api/users");
+        softassert.assertEquals(res.statusCode(), StatusCode.CREATED.code,"Object not created");
+        softassert.assertAll();
+        System.out.println("postwithpojo is working fine ");
+    }
+
 }

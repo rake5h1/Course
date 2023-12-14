@@ -4,8 +4,10 @@ package userManagement;
 import org.json.simple.JSONArray;
 import org.testng.annotations.Test;
 
+import core.BaseTest;
 import core.StatusCode;
 import io.restassured.response.Response;
+import utils.ExtentReport;
 import utils.JsonReader;
 import utils.PropertyReader;
 import utils.SoftAssertionUtil;
@@ -24,7 +26,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Iterator;
 
-public class Getuser {
+public class Getuser extends BaseTest {
     PropertyReader configfile;
     SoftAssertionUtil softassert;
 
@@ -51,8 +53,9 @@ public class Getuser {
 
     }
 
-    @Test(groups = { "size" })
+    @Test(groups = { "Regression" })
     public void hassize() {
+        ExtentReport.extentlog = ExtentReport.extentreport.startTest("hassize", "hassize test case");
         baseURI = "https://reqres.in/api/users";
         Response response = given().queryParam("page", 2).when().get();
         assertThat(response.statusCode(), equalTo(StatusCode.SUCCESS.code));
@@ -60,8 +63,10 @@ public class Getuser {
         assertThat(response.jsonPath().getList("data"), hasSize(6));
     }
 
-    @Test(groups = { "size" })
+    @Test(groups = { "Regression" })
     public void validatecontainsite() {
+        ExtentReport.extentlog = ExtentReport.extentreport.startTest("validatecontainsite",
+                "validatecontainsite test case");
 
         baseURI = "https://jsonplaceholder.typicode.com/";
 
@@ -88,8 +93,11 @@ public class Getuser {
 
     }
 
-    @Test(groups = { "size" })
+    @Test(groups = { "Regression" })
     public void multiplequeryparam() {
+        ExtentReport.extentlog = ExtentReport.extentreport.startTest("multiplequeryparam",
+                "multiplequeryparam test case");
+
         baseURI = "https://reqres.in/api";
 
         Response res = given().queryParam("page", 2).queryParam("per_page", 1).when().get("/users").then().assertThat()
@@ -218,7 +226,7 @@ public class Getuser {
     @Test
     public void getdatafromjsonarray() throws IOException {
         String data = new JsonReader().getjsonarraydata("languages", 2).toString();
-        System.out.println(data);
+        // System.out.println(data);
         System.out.println("getdatafromjsonarray passed");
     }
 

@@ -1,101 +1,224 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="20" passed="20" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="1" failed="0" skipped="3">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-13T12:11:50 IST" name="API Auomation Suite" finished-at="2023-12-13T12:11:58 IST" duration-ms="8116">
+  <suite started-at="2023-12-14T13:50:00 IST" name="API Auomation Suite" finished-at="2023-12-14T13:50:03 IST" duration-ms="2758">
     <groups>
       <group name="size">
-        <method signature="GetPost.getdatafromjson()[pri:0, instance:userManagement.GetPost@32b260fa]" name="getdatafromjson" class="userManagement.GetPost"/>
-        <method signature="Getuser.hassize()[pri:0, instance:userManagement.Getuser@7a419da4]" name="hassize" class="userManagement.Getuser"/>
-        <method signature="Getuser.multiplequeryparam()[pri:0, instance:userManagement.Getuser@7a419da4]" name="multiplequeryparam" class="userManagement.Getuser"/>
-        <method signature="Getuser.validatecontainsite()[pri:0, instance:userManagement.Getuser@7a419da4]" name="validatecontainsite" class="userManagement.Getuser"/>
+        <method signature="GetPost.getdatafromjson()[pri:0, instance:userManagement.GetPost@4efc180e]" name="getdatafromjson" class="userManagement.GetPost"/>
       </group> <!-- size -->
     </groups>
-    <test started-at="2023-12-13T12:11:50 IST" name="User TestCases" finished-at="2023-12-13T12:11:58 IST" duration-ms="8116">
+    <test started-at="2023-12-14T13:50:00 IST" name="User TestCases" finished-at="2023-12-14T13:50:03 IST" duration-ms="2758">
       <class name="userManagement.GetPost">
-        <test-method signature="basicauth()[pri:0, instance:userManagement.GetPost@32b260fa]" started-at="2023-12-13T12:11:50 IST" name="basicauth" finished-at="2023-12-13T12:11:52 IST" duration-ms="1602" status="PASS">
+        <test-method is-config="true" signature="config()[pri:0, instance:userManagement.GetPost@4efc180e]" started-at="2023-12-14T13:50:00 IST" name="config" finished-at="2023-12-14T13:50:00 IST" duration-ms="96" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- config -->
+        <test-method signature="basicauth()[pri:0, instance:userManagement.GetPost@4efc180e]" started-at="2023-12-14T13:50:00 IST" name="basicauth" finished-at="2023-12-14T13:50:03 IST" duration-ms="2722" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- basicauth -->
-        <test-method signature="getdatafromjson()[pri:0, instance:userManagement.GetPost@32b260fa]" started-at="2023-12-13T12:11:52 IST" name="getdatafromjson" finished-at="2023-12-13T12:11:54 IST" duration-ms="2284" status="PASS">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:userManagement.GetPost@4efc180e]" started-at="2023-12-14T13:50:03 IST" name="getResult" finished-at="2023-12-14T13:50:03 IST" duration-ms="2" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=basicauth status=SUCCESS method=GetPost.basicauth()[pri:0, instance:userManagement.GetPost@4efc180e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at core.BaseTest.getResult(BaseTest.java:27)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method signature="getdatafromjson()[pri:0, instance:userManagement.GetPost@4efc180e]" started-at="2023-12-14T13:50:03 IST" name="getdatafromjson" finished-at="2023-12-14T13:50:03 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at core.BaseTest.getResult(BaseTest.java:27)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getdatafromjson -->
-        <test-method signature="postdatarestassured()[pri:0, instance:userManagement.GetPost@32b260fa]" started-at="2023-12-13T12:11:54 IST" name="postdatarestassured" finished-at="2023-12-13T12:11:55 IST" duration-ms="618" status="PASS">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:userManagement.GetPost@4efc180e]" started-at="2023-12-14T13:50:03 IST" name="getResult" finished-at="2023-12-14T13:50:03 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=GetPost.getdatafromjson()[pri:0, instance:userManagement.GetPost@4efc180e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method signature="postdatarestassured()[pri:0, instance:userManagement.GetPost@4efc180e]" started-at="2023-12-14T13:50:03 IST" name="postdatarestassured" finished-at="2023-12-14T13:50:03 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at core.BaseTest.getResult(BaseTest.java:27)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postdatarestassured -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:userManagement.GetPost@4efc180e]" started-at="2023-12-14T13:50:03 IST" name="getResult" finished-at="2023-12-14T13:50:03 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=GetPost.postdatarestassured()[pri:0, instance:userManagement.GetPost@4efc180e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method signature="postwithpojo()[pri:0, instance:userManagement.GetPost@4efc180e]" started-at="2023-12-14T13:50:03 IST" name="postwithpojo" finished-at="2023-12-14T13:50:03 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at core.BaseTest.getResult(BaseTest.java:27)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postwithpojo -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:userManagement.GetPost@4efc180e]" started-at="2023-12-14T13:50:03 IST" name="getResult" finished-at="2023-12-14T13:50:03 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=GetPost.postwithpojo()[pri:0, instance:userManagement.GetPost@4efc180e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:userManagement.GetPost@4efc180e]" started-at="2023-12-14T13:50:03 IST" name="endReport" finished-at="2023-12-14T13:50:03 IST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.relevantcodes.extentreports.Report.terminate(Report.java:412)
+at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:708)
+at core.BaseTest.endReport(BaseTest.java:51)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:410)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
       </class> <!-- userManagement.GetPost -->
-      <class name="userManagement.Getuser">
-        <test-method signature="deletemethod()[pri:0, instance:userManagement.Getuser@7a419da4]" started-at="2023-12-13T12:11:50 IST" name="deletemethod" finished-at="2023-12-13T12:11:52 IST" duration-ms="1596" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deletemethod -->
-        <test-method signature="formparam()[pri:0, instance:userManagement.Getuser@7a419da4]" started-at="2023-12-13T12:11:52 IST" name="formparam" finished-at="2023-12-13T12:11:53 IST" duration-ms="643" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- formparam -->
-        <test-method signature="getcookies()[pri:0, instance:userManagement.Getuser@7a419da4]" started-at="2023-12-13T12:11:53 IST" name="getcookies" finished-at="2023-12-13T12:11:53 IST" duration-ms="292" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getcookies -->
-        <test-method signature="getdatafromjsonandpropertiesboth()[pri:0, instance:userManagement.Getuser@7a419da4]" started-at="2023-12-13T12:11:53 IST" name="getdatafromjsonandpropertiesboth" finished-at="2023-12-13T12:11:53 IST" duration-ms="261" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getdatafromjsonandpropertiesboth -->
-        <test-method signature="getdatafromjsonarray()[pri:0, instance:userManagement.Getuser@7a419da4]" started-at="2023-12-13T12:11:53 IST" name="getdatafromjsonarray" finished-at="2023-12-13T12:11:53 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getdatafromjsonarray -->
-        <test-method signature="getdatafromjsonarrayiteration()[pri:0, instance:userManagement.Getuser@7a419da4]" started-at="2023-12-13T12:11:53 IST" name="getdatafromjsonarrayiteration" finished-at="2023-12-13T12:11:53 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getdatafromjsonarrayiteration -->
-        <test-method signature="getdatafrompropertyfile()[pri:0, instance:userManagement.Getuser@7a419da4]" started-at="2023-12-13T12:11:53 IST" name="getdatafrompropertyfile" finished-at="2023-12-13T12:11:53 IST" duration-ms="248" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getdatafrompropertyfile -->
-        <test-method signature="hasItem()[pri:0, instance:userManagement.Getuser@7a419da4]" started-at="2023-12-13T12:11:53 IST" name="hasItem" finished-at="2023-12-13T12:11:54 IST" duration-ms="842" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- hasItem -->
-        <test-method signature="hassize()[pri:0, instance:userManagement.Getuser@7a419da4]" started-at="2023-12-13T12:11:54 IST" name="hassize" finished-at="2023-12-13T12:11:54 IST" duration-ms="272" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- hassize -->
-        <test-method signature="multipleheaders()[pri:0, instance:userManagement.Getuser@7a419da4]" started-at="2023-12-13T12:11:54 IST" name="multipleheaders" finished-at="2023-12-13T12:11:55 IST" duration-ms="243" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- multipleheaders -->
-        <test-method signature="multiplequeryparam()[pri:0, instance:userManagement.Getuser@7a419da4]" started-at="2023-12-13T12:11:55 IST" name="multiplequeryparam" finished-at="2023-12-13T12:11:55 IST" duration-ms="288" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- multiplequeryparam -->
-        <test-method signature="pathparam()[pri:0, instance:userManagement.Getuser@7a419da4]" started-at="2023-12-13T12:11:55 IST" name="pathparam" finished-at="2023-12-13T12:11:56 IST" duration-ms="865" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pathparam -->
-        <test-method signature="queryparam()[pri:0, instance:userManagement.Getuser@7a419da4]" started-at="2023-12-13T12:11:56 IST" name="queryparam" finished-at="2023-12-13T12:11:56 IST" duration-ms="279" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- queryparam -->
-        <test-method signature="testfetchheaders()[pri:0, instance:userManagement.Getuser@7a419da4]" started-at="2023-12-13T12:11:56 IST" name="testfetchheaders" finished-at="2023-12-13T12:11:56 IST" duration-ms="243" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testfetchheaders -->
-        <test-method signature="validateTestBody()[pri:0, instance:userManagement.Getuser@7a419da4]" started-at="2023-12-13T12:11:56 IST" name="validateTestBody" finished-at="2023-12-13T12:11:58 IST" duration-ms="1184" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateTestBody -->
-        <test-method signature="validatecontainsite()[pri:0, instance:userManagement.Getuser@7a419da4]" started-at="2023-12-13T12:11:58 IST" name="validatecontainsite" finished-at="2023-12-13T12:11:58 IST" duration-ms="546" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validatecontainsite -->
-        <test-method signature="validatesoftassert()[pri:0, instance:userManagement.Getuser@7a419da4]" started-at="2023-12-13T12:11:58 IST" name="validatesoftassert" finished-at="2023-12-13T12:11:58 IST" duration-ms="259" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validatesoftassert -->
-      </class> <!-- userManagement.Getuser -->
     </test> <!-- User TestCases -->
   </suite> <!-- API Auomation Suite -->
 </testng-results>
