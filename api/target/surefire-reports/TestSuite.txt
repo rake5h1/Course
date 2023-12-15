@@ -1,10 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 2, Errors: 0, Skipped: 3, Time elapsed: 3.368 s <<< FAILURE! - in TestSuite
-getResult(userManagement.GetPost)  Time elapsed: 2.729 s  <<< FAILURE!
-java.lang.NullPointerException
-
-endReport(userManagement.GetPost)  Time elapsed: 0.021 s  <<< FAILURE!
-java.lang.NullPointerException
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.794 s - in TestSuite

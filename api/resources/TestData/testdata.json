@@ -14,9 +14,15 @@
         "zh",
         "ko"
     ],
-    "contact": [
-        "name:Rakesh",
-        "email:abc@xyz.com",
-        "phone:1234567890"
+    "data": [
+        {
+            "city": "Mumbai",
+            "temp": 40
+        },
+        {
+            "city": "Delhi",
+            "temp": 45
+        }
+        
     ]
 }

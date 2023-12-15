@@ -13,11 +13,11 @@ public class ExtentReport {
 
 	public static ExtentTest extentlog;
 
-	public static void initialize(String extentconfigxmlPath) {
+	public static void initialize(String reportPath) {
 
 		if (extentreport == null) {
 
-			extentreport = new ExtentReports(extentconfigxmlPath, true);
+			extentreport = new ExtentReports(reportPath, true);
 
 			extentreport.addSystemInfo("Host Name", System.getProperty("user.name"));
 			extentreport.addSystemInfo("Environment", "QA");

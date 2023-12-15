@@ -1,5 +1,6 @@
 utils\ExtentReport.class
 utils\SoftAssertionUtil.class
+pojo\DataPojo.class
 utils\JsonReader.class
 core\BaseTest.class
 core\StatusCode.class

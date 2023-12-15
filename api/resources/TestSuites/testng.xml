@@ -6,18 +6,18 @@
     <!--            <include name="size"/>-->
     <!--        </run>-->
     <!--    </groups>-->
-    <!-- <groups>
+    <groups>
         <run>
             <include name="Regression"/>
         </run>
-    </groups> -->
+    </groups>
     <listeners>
         <listener class-name="utils.RetryListener"/>
     </listeners>
     <test name="User TestCases">
         <classes>
             <!-- //<class name="userManagement.Getuser"/> -->
-            <class name="userManagement.GetPost"/>
+            <class name="userManagement.JsonSchema"/>
         </classes>
 
 

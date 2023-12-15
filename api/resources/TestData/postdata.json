@@ -1,4 +1,5 @@
 {
     "name":"postman",
-    "password":"password"
+    "password":"password",
+    "languages":["Java","Python"]
 }
