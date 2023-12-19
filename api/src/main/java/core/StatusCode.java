@@ -7,6 +7,7 @@ public enum StatusCode {
     UNAUTHORIZED(401, "Invalid access token"),
     NOT_FOUND(404, "Cannot Find Requested Resource"),
     NO_CONTENT(204, "No content to send in the response body");
+    PAYMENT_REQUIRED(402,'Payment Required');
 
     public final int code;
     public final String msg;
