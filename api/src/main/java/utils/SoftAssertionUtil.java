@@ -3,10 +3,17 @@ package utils;
 import org.testng.asserts.SoftAssert;
 
 public class SoftAssertionUtil {
-    private SoftAssert softAssert;
+    private static SoftAssert softAssert;
 
-    public SoftAssertionUtil() {
-        softAssert = new SoftAssert();
+    private static void SoftAssertionUtil() {
+        // softAssert = new SoftAssert();
+    }
+
+    public static SoftAssert getInstance() {
+        if (softAssert == null) {
+            softAssert = new SoftAssert();
+        }
+        return softAssert;
     }
 
     public void assertTrue(boolean condition, String message) {
@@ -35,6 +42,6 @@ public class SoftAssertionUtil {
 
     public void assertAll() {
         softAssert.assertAll();
-    
+
     }
 }

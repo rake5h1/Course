@@ -7,6 +7,8 @@ import org.testng.annotations.Test;
 import core.BaseTest;
 import core.StatusCode;
 import io.restassured.response.Response;
+import pojo.DataPojo;
+import pojo.PostrequestBody;
 import utils.ExtentReport;
 import utils.JsonReader;
 import utils.PropertyReader;
@@ -15,6 +17,8 @@ import io.restassured.http.Header;
 import io.restassured.http.Headers;
 
 import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -239,6 +243,40 @@ public class Getuser extends BaseTest {
         }
         System.out.println("getdatafromjsonarrayiteration passed");
 
+    }
+
+    @Test(groups = { "Regression" })
+    public void getdatafrompojo() {
+        String city = "Mumbai";
+        int temp = 35;
+        int id = 12345;
+        String createdAt = "123456";
+        ExtentReport.extentlog = ExtentReport.extentreport.startTest("getdatafrompojo", "getdatafrompojo test case");
+        DataPojo body = new DataPojo();
+        body.setCity(city);
+        body.setTemp(temp);
+        body.setId(id);
+        body.setCreatedAt(createdAt);
+        Response res = given().header("Content-Type", "application/json").body(body).when()
+                .post("https://reqres.in/api/users/2");
+        assertThat(res.statusCode(), equalTo(StatusCode.CREATED.code));
+        // System.out.println(res.getBody().asString());
+        DataPojo responsebody = res.as(DataPojo.class);
+        System.out.println(responsebody.getCity());
+        System.out.println(responsebody.getTemp());
+        // System.out.println(responsebody);
+    }
+
+    @Test(groups = { "Singleton" })
+    public void singleton() {
+
+        ExtentReport.extentlog = ExtentReport.extentreport.startTest("singleton", "singleton test case");
+
+        Response res = given().when().get("https://reqres.in/api/users/2");
+        // softassert.assertEquals(res.statusCode(), StatusCode.SUCCESS.code, "Status
+        // code is Not 200");
+        // softassert.assertAll();
+        assertThat(res.statusCode(), equalTo(StatusCode.SUCCESS.code));
     }
 
 }

@@ -17,7 +17,7 @@
     <test name="User TestCases">
         <classes>
             <!-- //<class name="userManagement.Getuser"/> -->
-            <class name="userManagement.JsonSchema"/>
+            <class name="userManagement.Getuser"/>
         </classes>
 
 
